@@ -1,0 +1,4 @@
+example_configurations/*
+*
+!Configuration.h
+!Configuration_adv.h

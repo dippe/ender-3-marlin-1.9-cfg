@@ -82,9 +82,11 @@
 // startup. Implementation of an idea by Prof Braino to inform user that any changes made to this
 // build by the user have been successfully uploaded into firmware.
 #define STRING_CONFIG_H_AUTHOR "Peti" // Who made the changes.
-#define SHOW_BOOTSCREEN
+
+// disabled to spare some memory:
+// #define SHOW_BOOTSCREEN
 #define STRING_SPLASH_LINE1 SHORT_BUILD_VERSION // will be shown during bootup in line 1
-#define STRING_SPLASH_LINE2 WEBSITE_URL         // will be shown during bootup in line 2
+// #define STRING_SPLASH_LINE2 WEBSITE_URL         // will be shown during bootup in line 2
 
 /**
  * *** VENDORS PLEASE READ ***
@@ -665,7 +667,7 @@
  *
  * See https://github.com/synthetos/TinyG/wiki/Jerk-Controlled-Motion-Explained
  */
- // *** ??? elvileg kevesbe razkodik
+// *** enabled - theoretically it is smoother
 #define S_CURVE_ACCELERATION
 
 //===========================================================================
@@ -1436,6 +1438,7 @@
  *
  * :['JAPANESE', 'WESTERN', 'CYRILLIC']
  */
+ // *** this seems unused on ender 3
 #define DISPLAY_CHARSET_HD44780 JAPANESE
 
 /**
@@ -1471,6 +1474,7 @@
  * just remove some extraneous menu items to recover space.
  */
 //#define NO_LCD_MENUS
+// *** disabled,  spares approx 10KB of memory!!
 #define SLIM_LCD_MENUS
 
 //
